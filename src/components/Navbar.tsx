@@ -68,7 +68,7 @@ export default function Navbar() {
           <a href="/" className="text-sm font-semibold leading-6 text-white">
             Dashboard
           </a>
-          <Popover className="relative">
+          {/* <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
               Power Generation
               <ChevronDownIcon
@@ -116,7 +116,7 @@ export default function Navbar() {
                 </div>
               </Popover.Panel>
             </Transition>
-          </Popover>
+          </Popover> */}
         </Popover.Group>
       </nav>
       <Dialog
@@ -149,7 +149,7 @@ export default function Navbar() {
                 >
                   Dashboard
                 </a>
-                <Disclosure as="div" className="-mx-3">
+                {/* <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-blue-700">
@@ -176,7 +176,7 @@ export default function Navbar() {
                       </Disclosure.Panel>
                     </>
                   )}
-                </Disclosure>
+                </Disclosure> */}
               </div>
               <div className="absolute bottom-0 py-6">
                 <p className="text-sm font-semibold leading-6 text-white">Designed by <span aria-hidden="true">&rarr;</span></p>
