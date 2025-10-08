@@ -636,7 +636,7 @@ export default function Home() {
                         value: data[0].cb,
                       },
                     ].map((item, index) => (
-                      <div className="flex items-center">
+                      <div className="flex items-center" key={index}>
                         <div
                           className="w-10 h-5 m-1"
                           style={{ backgroundColor: item.color }}
