@@ -295,7 +295,7 @@ export default function Home() {
   const steamHeader_2_and_3 = data[0]?.steam_pressure_mainheader_2_and_3 ?? 0;
   const steamHeader_4 = data[0]?.steam_pressure_mainheader_4 ?? 0;
 
-  return ( 
+  return (
     <>
       <div className="">
         {/* <h1 className="text-2xl font-bold text-center pt-5">DASHBOARD</h1> */}
@@ -307,22 +307,18 @@ export default function Home() {
                   Overview
                   {/* <sup className="text-red-600 text-xs">* Testing</sup> */}
                 </CardTitle>
-                <a 
-                // href="/custom_report"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  className="h-4 w-4 text-muted-foreground"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="h-4 w-4 text-muted-foreground"
-                  >
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                  </svg>
-                </a>
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
               </CardHeader>
               <CardContent className="p-0">
                 <EnergyFlow />
@@ -352,20 +348,18 @@ export default function Home() {
                     * Under Development
                   </sup> */}
                 </CardTitle>
-                <a href="/">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="h-4 w-4 text-muted-foreground"
-                  >
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                  </svg>
-                </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  className="h-4 w-4 text-muted-foreground"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
               </CardHeader>
               <CardContent className="p-0">
                 {/* <SeparatedSourcesCard /> */}
@@ -486,71 +480,61 @@ export default function Home() {
                 </div>
               </CardContent>
               <div className="">
-                <a href="/powerhouse1">
-                  <div className="flex">
-                    <div className="bg-[#384C6B] w-10 h-5 m-1"></div>
-                    <p>Power House 1</p>
-                    {data.map((item) => {
-                      return (
-                        <p className="ml-auto mr-5" key={1}>
-                          {(item.powerhouse1gen / 1000).toFixed(1)} MW
-                        </p>
-                      );
-                    })}
-                  </div>
-                </a>
-                <a href="/powerhouse2">
-                  <div className="flex">
-                    <div className="bg-[#a75281] w-10 h-5 m-1"></div>
-                    <p>Power House 2</p>
-                    {data.map((item) => {
-                      return (
-                        <p className="ml-auto mr-5" key={2}>
-                          {(item.powerhouse2gen / 1000).toFixed(1)} MW
-                        </p>
-                      );
-                    })}
-                  </div>
-                </a>
-                <a href="/powerhouse3">
-                  <div className="flex">
-                    <div className="bg-[#C09741] w-10 h-5 m-1"></div>
-                    <p>Power House 3</p>
-                    {data.map((item) => {
-                      return (
-                        <p className="ml-auto mr-5" key={3}>
-                          {(item.powerhouse3gen / 1000).toFixed(1)} MW
-                        </p>
-                      );
-                    })}
-                  </div>
-                </a>
-                <a href="/am17_powerhouse2">
-                  <div className="flex">
-                    <div className="bg-[#4F9D9A] w-10 h-5 m-1"></div>
-                    <p>Power House 4</p>
-                    {data.map((item) => {
-                      return (
-                        <p className="ml-auto mr-5" key={4}>
-                          {(item.AM17_PH2 / 1000).toFixed(1)} MW
-                        </p>
-                      );
-                    })}
-                  </div>
-                </a>
-                <a href="/solar">
-                  <div className="flex">
-                    <div className="bg-[#9595B7] w-10 h-5 m-1"></div>
-                    <p>Solar</p>
-                    {data.map((item) => {
-                      return (
-                        <p className="ml-auto mr-5" key={5}>
-                          {(item.totalsolargen / 1000).toFixed(2)} MW
-                        </p>
-                      );
-                    })}
-                  </div>
-                </a>
+                <div className="flex">
+                  <div className="bg-[#384C6B] w-10 h-5 m-1"></div>
+                  <p>Power House 1</p>
+                  {data.map((item) => {
+                    return (
+                      <p className="ml-auto mr-5" key={1}>
+                        {(item.powerhouse1gen / 1000).toFixed(1)} MW
+                      </p>
+                    );
+                  })}
+                </div>
+                <div className="flex">
+                  <div className="bg-[#a75281] w-10 h-5 m-1"></div>
+                  <p>Power House 2</p>
+                  {data.map((item) => {
+                    return (
+                      <p className="ml-auto mr-5" key={2}>
+                        {(item.powerhouse2gen / 1000).toFixed(1)} MW
+                      </p>
+                    );
+                  })}
+                </div>
+                <div className="flex">
+                  <div className="bg-[#C09741] w-10 h-5 m-1"></div>
+                  <p>Power House 3</p>
+                  {data.map((item) => {
+                    return (
+                      <p className="ml-auto mr-5" key={3}>
+                        {(item.powerhouse3gen / 1000).toFixed(1)} MW
+                      </p>
+                    );
+                  })}
+                </div>
+                <div className="flex">
+                  <div className="bg-[#4F9D9A] w-10 h-5 m-1"></div>
+                  <p>Power House 4</p>
+                  {data.map((item) => {
+                    return (
+                      <p className="ml-auto mr-5" key={4}>
+                        {(item.AM17_PH2 / 1000).toFixed(1)} MW
+                      </p>
+                    );
+                  })}
+                </div>
+                <div className="flex">
+                  <div className="bg-[#9595B7] w-10 h-5 m-1"></div>
+                  <p>Solar</p>
+                  {data.map((item) => {
+                    return (
+                      <p className="ml-auto mr-5" key={5}>
+                        {(item.totalsolargen / 1000).toFixed(2)} MW
+                      </p>
+                    );
+                  })}
+                </div>
                 <div className="flex bg-[#1b2d92] m-[2px] p-1 text-white font-semibold rounded">
                   <p className="ml-1">Total Power Generation</p>
                   {data.map((item) => {
@@ -576,8 +560,7 @@ export default function Home() {
                 <CardTitle className="text-xl font-bold">
                   Steam Generation
                 </CardTitle>
-                <a href="/steam-report">
-                  <svg
+                <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="none"
@@ -589,7 +572,6 @@ export default function Home() {
                 >
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                 </svg>
-                </a>
               </CardHeader>
 
               <CardContent className="flex justify-center">
@@ -628,89 +610,60 @@ export default function Home() {
                   <>
                     {[
                       {
-                        href: "/steamph1",
                         label: "Steam Power House 1",
                         color: "#384C6B",
                         value: data[0].steamph1,
                       },
                       {
-                        href: "/steamph2",
                         label: "Steam Power House 2",
                         color: "#b495b7",
                         value: data[0].steamph2.toFixed(1),
                         hrsg_gasflow: data[0].hrsg_gasflow,
                       },
                       {
-                        href: "/steamph3",
                         label: "Steam Power House 3",
                         color: "#E28A2B",
                         value: data[0].steamph3,
                       },
                       {
-                        href: "/steamph4",
                         label: "Steam Power House 4",
                         color: "#95b798",
                         value: data[0].steamph4,
                       },
                       {
-                        href: "/coalboiler",
                         label: "Out Source Boiler",
                         color: "#9595B7",
                         value: data[0].cb,
                       },
                     ].map((item, index) => (
-                      <a href={item.href} key={index}>
-                        <div className="flex items-center">
-                          <div
-                            className="w-10 h-5 m-1"
-                            style={{ backgroundColor: item.color }}
-                          ></div>
-                          <p>{item.label}</p>
-
-                          {/* Conditionally render green/red dot for Steam Power House 2 */}
-                          {/* {item.label === "Steam Power House 2" && (
+                      <div className="flex items-center">
+                        <div
+                          className="w-10 h-5 m-1"
+                          style={{ backgroundColor: item.color }}
+                        ></div>
+                        <p>{item.label}</p>
+                        {item.label === "Steam Power House 2" && (
+                          <span
+                            className="-ml-[1px]"
+                            style={{
+                              position: "relative",
+                              top: "-0.5rem",
+                            }}
+                          >
                             <span
-                              className="-ml-[1px]"
-                              style={{
-                                position: "relative",
-                                top: "-0.5rem",
-                              }}
+                              className={`text-xs ${
+                                item.hrsg_gasflow && item.hrsg_gasflow > 20
+                                  ? "animate-pulse"
+                                  : "grayscale"
+                              }`}
                             >
-                              <div
-                                className="w-2 h-2 rounded-full inline-block"
-                                style={{
-                                  backgroundColor:
-                                    item.hrsg_gasflow && item.hrsg_gasflow > 20
-                                      ? "green"
-                                      : "red",
-                                }}
-                              ></div>
+                              🔥
                             </span>
-                          )} */}
+                          </span>
+                        )}
 
-                          {item.label === "Steam Power House 2" && (
-                            <span
-                              className="-ml-[1px]"
-                              style={{
-                                position: "relative",
-                                top: "-0.5rem",
-                              }}
-                            >
-                              <span
-                                className={`text-xs ${
-                                  item.hrsg_gasflow && item.hrsg_gasflow > 20
-                                    ? "animate-pulse"
-                                    : "grayscale"
-                                }`}
-                              >
-                                🔥
-                              </span>
-                            </span>
-                          )}
-
-                          <p className="ml-auto mr-5">{item.value} T/H</p>
-                        </div>
-                      </a>
+                        <p className="ml-auto mr-5">{item.value} T/H</p>
+                      </div>
                     ))}
 
                     {/* Total */}
